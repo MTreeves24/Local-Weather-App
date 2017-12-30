@@ -1,0 +1,96 @@
+body{
+    margin:0;
+    background:url("https://i.imgur.com/j7qw5t5.jpg") no-repeat;
+    background-size: 1800px;
+    background-position: -200px -100px;
+    color: white;
+    text-align: center;
+}
+
+
+.container{
+    position: absolute;
+    top:25%;
+    left:0;
+    right:0;
+    text-shadow: 1px 1px 1px black;
+}
+.title{
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.location{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item{
+    padding:10px;
+    margin:5px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px white;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 1.5em;
+}
+
+.wind{
+    background: url("https://pixabay.com/get/eb3db9082cfc023ed1534705fb094391e477e7d718ac104494f3c770a0eeb1be/child-2887483_1920.jpg");
+}
+
+img{
+    width: 50px;
+}
+
+.test{
+    font-size: 20px;
+    color: white;
+}
+
+.change-units{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: red;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    font-size: 0.5em;
+
+}
+
+.changeC , .changeF{
+    color: white;
+    padding:10px;
+    margin:2px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px white;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 1.5em;
+}
+
+.change:hover{
+    background:white;
+    color: black;
+    text-shadow: 1px 1px 1px black;
+    transform:scale(1.1);
+
+}
+
+.button-active{
+    background:white;
+    color: black;
+    text-shadow: 1px 1px 1px black;
+    transform:scale(1.1);
+}
+
+.rain{
+    background:url(https://pixabay.com/get/eb30b2072cf6083ed1534705fb094391e477e7d718ac104494f4c77ca6e9b3b1/rain-2538429_1920.jpg) no-repeat;
+    background-size: 1000px;
+
+}

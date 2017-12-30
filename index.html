@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WeatherApp</title>
+    <link rel="stylesheet" type="text/css" href="weather.css">
+    <link rel="stylesheet" type="text/css" href="weather-icons.css">
+</head>
+<body>
+
+<div class="container">
+<div class="title">What's the weather like?</div>
+<div class="location">Loading...</div>
+<div class="flex">
+
+    <div class="flex item"><div class="temp"></div><span class="unit">&degC</span></div>
+    <div class="summary item"></div>
+    <div class="wind-speed item"></div>
+    <div class="cloud-cover item"></div>
+</div>
+<div class="test"></div>
+<div class="change-units">
+<button class="changeF change" onclick="changeUnit()">&degF</button>
+<button class="changeC change button-active" onclick="changeUnit()">&degC</button>
+</div>
+</div>
+
+<script type="text/javascript" src="weather.js"></script>
+</body>
+</html>
