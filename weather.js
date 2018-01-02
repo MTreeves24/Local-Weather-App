@@ -27,6 +27,9 @@ var weatherReq = new XMLHttpRequest();
         summary = summary.innerHTML = weatherData.weather[0].main;
         document.querySelector(".wind-speed").innerHTML = "Wind: " + weatherData.wind.speed + "mph";
         document.querySelector(".temp").innerHTML = Math.round(weatherData.main.temp);
+        var unit = document.querySelector(".unit")
+        unit.innerHTML = "&degC"
+
         document.querySelector(".cloud-cover").innerHTML = "Cloud Cover: " + weatherData.clouds.all + "%";
 
         //OWM icons*****
