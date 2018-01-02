@@ -7,14 +7,15 @@ body{
     text-align: center;
 }
 
-
 .container{
+    font-size: 0.8em;
     position: absolute;
-    top:25%;
+    top:23%;
     left:0;
     right:0;
     text-shadow: 1px 1px 1px black;
 }
+
 .title{
     font-size: 4em;
     margin-bottom: 20px;
@@ -48,7 +49,7 @@ img{
     width: 50px;
 }
 
-.test{
+.icon{
     font-size: 20px;
     color: white;
 }
@@ -61,7 +62,6 @@ img{
     text-decoration: none;
     text-shadow: 1px 1px 1px black;
     font-size: 0.5em;
-
 }
 
 .changeC , .changeF{
@@ -79,7 +79,6 @@ img{
     color: black;
     text-shadow: 1px 1px 1px black;
     transform:scale(1.1);
-
 }
 
 .button-active{
@@ -89,8 +88,9 @@ img{
     transform:scale(1.1);
 }
 
-.rain{
-    background:url(https://pixabay.com/get/eb30b2072cf6083ed1534705fb094391e477e7d718ac104494f4c77ca6e9b3b1/rain-2538429_1920.jpg) no-repeat;
-    background-size: 1000px;
 
+@media screen and (min-width: 900px){
+    .container{
+        font-size: 1em;
+    }
 }

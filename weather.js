@@ -25,14 +25,23 @@ var weatherReq = new XMLHttpRequest();
     var weatherData = JSON.parse(weatherReq.responseText);
         var summary = document.querySelector(".summary")
         summary = summary.innerHTML = weatherData.weather[0].main;
-
         document.querySelector(".wind-speed").innerHTML = "Wind: " + weatherData.wind.speed + "mph";
-
         document.querySelector(".temp").innerHTML = Math.round(weatherData.main.temp);
+        document.querySelector(".cloud-cover").innerHTML = "Cloud Cover: " + weatherData.clouds.all + "%";
 
+        //OWM icons*****
+        // document.querySelector(".icon").innerHTML = ('<img src="http://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png">');
+
+        //NEW icons********************************************************
+        document.querySelector(".icon").innerHTML =  "<i class='wi wi-owm-" + weatherData.weather[0].id + "'></i>";
+        //*****************************************************************
+
+
+        //CHANGE-UNIT BUTTONS**********************************************
         var changeF = document.querySelector(".changeF")
         var changeC = document.querySelector(".changeC")
         var unit = document.querySelector(".unit")
+
         changeF.addEventListener("click",function(){
             changeF.classList.add("button-active")
             changeC.classList.remove("button-active")
@@ -45,11 +54,7 @@ var weatherReq = new XMLHttpRequest();
             unit.innerHTML = "&degC"
             document.querySelector(".temp").innerHTML = Math.round(weatherData.main.temp);
         })
-
-
-        document.querySelector(".cloud-cover").innerHTML = "Cloud Cover: " + weatherData.clouds.all + "%";
-        document.querySelector(".test").innerHTML = ('<img src="http://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png">');
-
+        //****************************************************************
 
 };
 
@@ -71,6 +76,7 @@ getLocation();
             changeC.classList.toggle("button-active")
             unit.innerHTML = "&degF"
     }
+
 
 
 
