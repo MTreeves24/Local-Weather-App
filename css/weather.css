@@ -48,8 +48,15 @@ img{
 }
 
 .icon{
+    margin-top: 2%;
     font-size: 20px;
     color: white;
+}
+.icon p{
+    display: none;
+    padding-top: 20px;
+    width:70%;
+    margin:0 auto;
 }
 
 .change-units{
@@ -90,6 +97,7 @@ img{
     text-shadow: 1px 1px 1px black;
     transform:scale(1.1);
 }
+
 
 
 @media screen and (min-width: 900px){

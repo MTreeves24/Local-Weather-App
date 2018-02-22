@@ -11,8 +11,8 @@ function showPosition(position) {
     var long = position.coords.longitude;
 
 var locReq = new XMLHttpRequest();
-    locReq.open('GET', 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + "," + long + '&key=AIzaSyAErl2Y9MD-u1q27zVXM2yWoocgyehN-ZU');
-    locReq.onload = function(){
+    locReq.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyAErl2Y9MD-u1q27zVXM2yWoocgyehN-ZU");
+    locReq.onload = () => {
     var locData = JSON.parse(locReq.responseText);
     var cityName = locData.results[0].address_components[1].long_name;
     var countyName = locData.results[0].address_components[3].long_name;
@@ -20,7 +20,7 @@ var locReq = new XMLHttpRequest();
 
 
 var weatherReq = new XMLHttpRequest();
-    weatherReq.open('GET', "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric&appid=6f4fe0fb1959811162e60dcd1b5a9ee7");
+    weatherReq.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric&appid=6f4fe0fb1959811162e60dcd1b5a9ee7");
     weatherReq.onload = function(){
     var weatherData = JSON.parse(weatherReq.responseText);
         var summary = document.querySelector(".summary")
@@ -43,15 +43,14 @@ var weatherReq = new XMLHttpRequest();
         //CHANGE-UNIT BUTTONS**********************************************
         var changeF = document.querySelector(".changeF")
         var changeC = document.querySelector(".changeC")
-        var unit = document.querySelector(".unit")
 
-        changeF.addEventListener("click",function(){
+        changeF.addEventListener("click",() => {
             changeF.classList.add("button-active")
             changeC.classList.remove("button-active")
             unit.innerHTML = "&degF"
             document.querySelector(".temp").innerHTML = Math.floor(weatherData.main.temp * 9/5 + 32);
         })
-        changeC.addEventListener("click",function(){
+        changeC.addEventListener("click",() => {
             changeC.classList.add("button-active")
             changeF.classList.remove("button-active")
             unit.innerHTML = "&degC"
@@ -70,22 +69,9 @@ locReq.send();
 
 getLocation();
 
-
-    function changeUnit(){
-        var changeF = document.querySelector(".changeF")
-        var changeC = document.querySelector(".changeC")
-        var unit = document.querySelector(".unit")
-            changeF.classList.toggle("button-active")
-            changeC.classList.toggle("button-active")
-            unit.innerHTML = "&degF"
-    }
+setTimeout(() => {
+    const notLoaded = document.querySelector(".icon p");
+    notLoaded.style.display="block";
+},6000);
 
 
-
-
-
-//CODE FOR CHANGING BACKGROUND IMAGE***
-    //     if(summary === "Clouds"){
-    // console.log("yes")
-    // document.body.style.background = "url('https://pixabay.com/get/eb30b2072cf6083ed1534705fb094391e477e7d718ac104494f4c77ca6e9b3b1/rain-2538429_1920.jpg')"
-    // }
