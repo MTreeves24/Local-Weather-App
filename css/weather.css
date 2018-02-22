@@ -1,7 +1,7 @@
 body{
     margin:0px;
     background:url("https://i.imgur.com/j7qw5t5.jpg") no-repeat;
-    background-size: 1800px;
+    background-size: 2000px;
     background-position: -200px -100px;
     color: white;
     text-align: center;
@@ -42,9 +42,6 @@ body{
     font-size: 1.5em;
 }
 
-.wind{
-    background: url("https://pixabay.com/get/eb3db9082cfc023ed1534705fb094391e477e7d718ac104494f3c770a0eeb1be/child-2887483_1920.jpg");
-}
 
 img{
     width: 50px;
@@ -96,6 +93,11 @@ img{
 
 
 @media screen and (min-width: 900px){
+    body{
+    background:url("https://i.imgur.com/j7qw5t5.jpg") no-repeat;
+    background-size: 2200px;
+    background-position: -200px -100px;
+    }
     .container{
         font-size: 1em;
     }
