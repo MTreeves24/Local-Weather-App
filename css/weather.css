@@ -1,17 +1,16 @@
 body{
     margin:0px;
     background:url("https://i.imgur.com/j7qw5t5.jpg") no-repeat;
-    background-size: 2000px;
-    background-position: -200px -100px;
+    background-size: stretch;
+    background-position: 0px -100px;
     color: white;
     text-align: center;
 }
 
 .container{
-    margin:20px;
     font-size: 0.8em;
     position: absolute;
-    top:19%;
+    top:15%;
     left:0;
     right:0;
     text-shadow: 1px 1px 1px black;
@@ -102,9 +101,7 @@ img{
 
 @media screen and (min-width: 900px){
     body{
-    background:url("https://i.imgur.com/j7qw5t5.jpg") no-repeat;
-    background-size: 2200px;
-    background-position: -200px -100px;
+        background-position: 0px -200px;
     }
     .container{
         font-size: 1em;

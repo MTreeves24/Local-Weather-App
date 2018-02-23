@@ -9,7 +9,7 @@ function getLocation() {
 function showPosition(position) {
     var lat = position.coords.latitude;
     var long = position.coords.longitude;
-
+console.log(lat + " " + long)
 var locReq = new XMLHttpRequest();
     locReq.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyAErl2Y9MD-u1q27zVXM2yWoocgyehN-ZU");
     locReq.onload = () => {
@@ -71,7 +71,7 @@ getLocation();
 
 setTimeout(() => {
     const notLoaded = document.querySelector(".icon p");
-    notLoaded.style.display="block";
+    notLoaded.style.display = "block";
 },6000);
 
 
